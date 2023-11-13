@@ -7,6 +7,14 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	SingleLinkedList<int> l1;
+	SingleLinkedList<int> l2 = l1;
+	l1.push_tail(3);
+	l1.push_tail(4);
+	l1.push_tail(-3);
+
+	cout << l1.get_size() << endl;
+	cout << l2.get_size() << endl;
+	l1.print();
 	return 0;
 }
